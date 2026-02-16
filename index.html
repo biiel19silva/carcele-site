@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carcele Portas Automáticas</title>
+
+  <!-- Fonte com estilo industrial (combina com serralheria) -->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050816; /* azul bem escuro quase preto */
+      --card: #0b1228;
+      --accent: #1e90ff;
+      --text: #e6e9f2;
+      --muted: #9aa3b2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(180deg, #02040d, #050816);
+      padding: 25px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #111a38;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+
+    .menu a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .menu a:hover { color: var(--accent); }
+
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
+
+    .hero p { color: var(--muted); }
+
+    /* Botões de contato */
+    .contact-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      background: var(--card);
+      border: 1px solid #1b2550;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Galeria */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img, .gallery video {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #1c274f;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Sobre mim */
+    .about {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 12px;
+      border: 2px solid #1b2550;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--muted);
+      border-top: 1px solid #111a38;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .about { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">CARCELE</div>
+    <div class="menu">
+      <a href="#galeria">Galeria</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Portas Automáticas & Soluções em Serralheria</h1>
+  <p>Instalação • Manutenção • Fabricação Sob Medida</p>
+
+  <div class="contact-buttons" id="contato">
+    <!-- CONFIGURAR LINKS ABAIXO -->
+    <a class="btn" href="https://wa.me/19998645893" target="_blank">WhatsApp</a>
+    <a class="btn" href="https://instagram.com/carceleportasautimaticas" target="_blank">Instagram</a>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Galeria de Trabalhos</h2>
+
+  <!--
+    COMO USAR:
+    - Coloque suas 20 fotos dentro da pasta /img
+    - Nomeie como: foto1.jpg, foto2.jpg ... foto20.jpg
+    - Substitua o vídeo abaixo pelo seu.
+  -->
+
+  <div class="gallery">
+    <!-- 20 FOTOS -->
+    <script>
+      for (let i = 1; i <= 20; i++) {
+        document.write(`<img src="img/foto${i}.jpg" alt="Trabalho ${i}">`);
+      }
+    </script>
+
+    <!-- 1 VÍDEO -->
+    <video controls>
+      <source src="img/video.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2>Sobre Mim</h2>
+
+  <div class="about">
+    <!-- Coloque sua foto em /img/perfil.jpg -->
+    <img src="img/perfil.jpg" alt="Foto do profissional">
+
+    <div>
+      <p>
+        <!-- ESCREVA SUA HISTÓRIA AQUI -->
+        Profissional especializado em serralheria e automação de portas,
+        oferecendo soluções resistentes, seguras e sob medida.
+        Trabalho com materiais de qualidade, acabamento profissional
+        e atendimento direto ao cliente.
+      </p>
+
+      <p>
+        Atendo residências, comércios e indústrias, sempre buscando
+        durabilidade, segurança e estética no projeto.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Carcele Portas Automáticas • Todos os direitos reservados
+</footer>
+
+</body>
+</html>
